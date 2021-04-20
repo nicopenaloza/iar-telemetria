@@ -46,12 +46,30 @@ function GetData(){
 
     }
 
- /*
+ 
     let LineaPc;
+
     while (LineaPc = PC.next()){
-         console.log(LineaPc.toString());
+        
+        const valores = LineaPc.toString().split(' ');
+        if (valores[0] == 'cpu_fan:'){
+            data.pc.cpu_fan = parseInt(valores[8]);
+        }
+
+        if (valores[0] == "temp1:" || valores[0] == "temp2:"){
+            data.pc.temperaturas.mother.push(valores[8].replaceAll('Â°C', '').replaceAll('+', ''));
+        }
+
+        if (valores[0] == "Core"){
+            data.pc.temperaturas.cores.push(valores[9].replaceAll('Â°C', '').replaceAll('+', ''));
+        }
+
+        if (valores[0] == "Package"){
+            data.pc.temperaturas.cores.push(valores[4].replaceAll('Â°C', '').replaceAll('+', ''));
+        }
+
     }
-*/
+
 
     let lineaDisco;
     
