@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/nicopenaloza/iar-telemetria#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "n-readlines": "^1.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

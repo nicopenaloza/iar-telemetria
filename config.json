@@ -1,0 +1,11 @@
+{
+    "rutas": [
+        "D:/iar-telemetria/aca/log_tlmy_1.txt",
+        "D:/iar-telemetria/aca/log_tlmy_2.txt",
+        "D:/iar-telemetria/aca/hd_space.log"
+    ],
+
+    "satelite": {
+        "nucleos": 5
+    }
+}
