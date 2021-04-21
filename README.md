@@ -1,4 +1,4 @@
-# iar-telemetria
+# iar-telemetria-client
 ## Grupo de Pasantias N° 4
 #### Colegio Florentino Ameghino
 ##### Integrantes: GIAMMARINI Ana, PEÑALOZA Nicolas, ZAVALETA Maximo
