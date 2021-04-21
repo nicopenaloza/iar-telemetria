@@ -32,4 +32,18 @@
 
 ```
 
-En donde dice `"nucleos"` colocar la cantidad de nucleos que tiene el satelite (la cantidad a monitorear).
+En donde dice `"nucleos"` colocar la cantidad de nucleos que tiene el satelite (la cantidad a monitorear), Segun el siguiente ejemplo de los datos del satelite podremos ver como tiene un total de 5 nucleos.
+
+```
+1,0
+1,0
+32.6 // Nucleo 1
+32.1 // Nucleo 2
+33.2 // Nucleo 3
+34.3 // Nucleo 4
+34.2 // Nucleo 5
+4.984
+14.82984
+27.651
+28.
+```
