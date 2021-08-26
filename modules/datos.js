@@ -94,6 +94,7 @@ function GetData(){
 
 
     }
+    console.log(data);
     return data; // Devuelve el data object
 
 }
