@@ -10,7 +10,7 @@ Este software genera una api REST la cual al ser solicitado por el servidor esta
 
   1. Descargar el repositorio
   2. Instalar nodeJS en el equipo
-  3. En el archivo `config.json` colocar las rutas exactas de los archivos que desea monitorear. (El primero es el del satelite, el segundo de la pc y el tercero del disco)
+  3. En el archivo `config.json` colocar las rutas exactas de los archivos que desea monitorear. (El primero es el del satelite, el segundo de la pc y el tercero del disco), asignar un puerto donde trabajara el sistema y especificar la cantidad de nucleos que hay en el primer archivo.
   4. Una vez finalizado esto abrir una terminal en la carpeta del programa
   5. Escribir en esa terminal `node app.js`
   6. Listo, Ahora solo toca dejar el programa ejecutandose en segundo plano.
@@ -21,6 +21,7 @@ Este software genera una api REST la cual al ser solicitado por el servidor esta
 ```json
 
 {
+    "puerto": 3000,
     "rutas": [
         "D:/iar-telemetria/aca/log_tlmy_1.txt",
         "D:/iar-telemetria/aca/log_tlmy_2.txt",
