@@ -1,8 +1,8 @@
 {
     "rutas": [
-        "D:/iar-telemetria/aca/log_tlmy_1.txt",
-        "D:/iar-telemetria/aca/log_tlmy_2.txt",
-        "D:/iar-telemetria/aca/hd_space.log"
+        "RUTA_EXACTA_SATELITE",
+        "RUTA_EXACTA_PC",
+        "RUTA_EXACTA_DISCO"
     ],
 
     "satelite": {

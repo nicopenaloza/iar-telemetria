@@ -1,7 +1,7 @@
 {
-  "name": "iar-telemetria",
+  "name": "iar-telemetria-client",
   "version": "1.0.0",
-  "description": "asd",
+  "description": "Este software genera una api REST la cual al ser solicitado por el servidor esta genera una respuesta con los datos del cliente con los cuales se puede hacer un monitoreo desde el servidor y mostrarlo en una interfaz.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,8 +12,8 @@
     "url": "git+https://github.com/nicopenaloza/iar-telemetria.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "G4 GIAMMARINI ANA, PEÑALOZA NICOLAS, ZAVALETA MAXIMO",
+  "license": "Apache License 2.0",
   "bugs": {
     "url": "https://github.com/nicopenaloza/iar-telemetria/issues"
   },

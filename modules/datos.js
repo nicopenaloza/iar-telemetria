@@ -4,11 +4,11 @@ const config = require("../config.json");
 
 function GetData(){
 
-    let Satelite = new LineByLine(config.rutas[0]);
-    let PC = new LineByLine(config.rutas[1]);
-    let Discos = new LineByLine(config.rutas[2]);
+    let Satelite = new LineByLine(config.rutas[0]); // lee el archivo en la ruta especificada en el config.json
+    let PC = new LineByLine(config.rutas[1]); // lee el archivo en la ruta especificada en el config.json
+    let Discos = new LineByLine(config.rutas[2]); // lee el archivo en la ruta especificada en el config.json
 
-    let data = {
+    let data = { // genera el objeto que va a devolver este modulo con los datos necesarios
         satelite : {
             temperaturas : [],
             voltajes : []
@@ -30,6 +30,13 @@ function GetData(){
     let index = 0;
     while (lineaSatelite = Satelite.next()){ // si no va con un solo = no anda, no se porque
 
+        /*
+        Algoritmo:
+            1. Omite las primeras dos lineas
+            2. Segun la cantidad de nucleos especificadas en el json carga los datos a la clase data
+            3. Lo que queda lo toma como voltaje y lo añade a la data
+        */
+        
         if (index > 1){ // omite las primeras 2 lineas
 
             if (index <= config.satelite.nucleos + 1){ // Temperaturas
@@ -50,6 +57,12 @@ function GetData(){
     let LineaPc;
 
     while (LineaPc = PC.next()){
+        
+        /*
+        Algoritmo:
+            1. Separa la linea en una lista dividida por espacios
+            2. Dependiendo lo que diga el primer valor de la lista cargarlo a algun lado removiendo los caracteres innecesarios
+        */
         
         const valores = LineaPc.toString().split(' '); // Crea una lista con todos los valores de la linea
         if (valores[0] == 'cpu_fan:'){ // Devuelve el RPM del CPU FAN
@@ -74,6 +87,13 @@ function GetData(){
     let lineaDisco;
     
     while (lineaDisco = Discos.next()){
+        
+        /*
+        Algoritmo:
+            1. Si la linea comienza con la / sigue al paso 2
+            2. busca el valor en % (porcentaje)
+            3. Lo toma y lo añade a la lista de discos de data, guardando el nombre del disco y el uso sin el %
+        */
         
         if (lineaDisco.toString()[0] == '/') { // Busca los discos
             
@@ -101,6 +121,6 @@ function GetData(){
 
 module.exports = {
     getInfo: function(){
-        return GetData();
+        return GetData(); // Devuelve los valores del archivo.
     }
 }
