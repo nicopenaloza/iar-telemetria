@@ -1,7 +1,7 @@
 # iar-telemetria-client
 ## Grupo de Pasantias N° 4
 #### Colegio Florentino Ameghino
-##### Integrantes: GIAMMARINI Ana, PEÑALOZA Nicolas, ZAVALETA Maximo
+##### Integrantes: GIAMMARINI Ana, PEÑALOZA Nicolas
 
 ## Descripción:
 Este software genera una api REST la cual al ser solicitado por el servidor esta genera una respuesta con los datos del cliente con los cuales se puede hacer un monitoreo desde el servidor y mostrarlo en una interfaz.
